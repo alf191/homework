@@ -14,4 +14,3 @@ elif (a + c) > (b + c):
     print(a + c)
 else:
     print(b + c)
-
