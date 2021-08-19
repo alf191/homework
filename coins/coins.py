@@ -4,13 +4,14 @@
 # Найдите максимальную сумму из любых двух монет.
 # Номинальная стоимость монет: a, b и с тугриков.
 
-def max_sum_of_2(a: int, b: int, c: int) -> int:
-    pass
+))
+a = int(input('Moneta 1: '))
+b = int(input('Moneta 2: '))
+c = int(input('Moneta 3: '))
+if (a + b) > (a + c) and (a + b) > (b + c):
+    print(a + b)
+elif (a + c) > (b + c):
+    print(a + c)
+else:
+    print(b + c)
 
-
-if __name__ == "__main__":
-    a = int(input("a = "))
-    b = int(input("a = "))
-    c = int(input("a = "))
-
-    print(max_sum_of_2(a, b, c))
