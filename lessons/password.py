@@ -6,7 +6,6 @@ upper_1 = 0
 lower_1 = 0
 punctuation_1 = 0
 number = 0
-
 for i in a:
     if i.isupper():
         upper_1 = +1
