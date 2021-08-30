@@ -1,20 +1,24 @@
-n = int(input('Введите кол-во уроков: '))
-sum = 0  # счетчик нечетных уроков
-sum1 = 0  # счетчик четных
-for i in range(1, n + 1, 2):
-    sum += 1
-    a = sum * 5  # кол-во перемен по 5
-for x in range(1, n, 2):
-    sum1 += 1
-    b = sum1 * 15  # кол-во перемен по 15
-if n % 2 == 0:
-    b = b - 15  # если последний урок четный
-else:
-    a = a - 5  # если последний урок нечетный
-time_out = n * 45 + a + b  # время змнятий с переменами
-end_hour = time_out // 60  # время змнятий часы
-end_minut = time_out % 60  # время змнятий минуты
-endlesson_h = 8 + end_hour
-endlesson_m = end_minut
+import string
 
-print('Уроки завершатся в ', endlesson_h, 'часов', endlesson_m, 'минут')
+a = input('Введите пароль: ')
+
+upper_1 = 0
+lower_1 = 0
+punctuation_1 = 0
+number = 0
+
+for i in a:
+    if i.isupper():
+        upper_1 = +1
+    elif i.islower():
+        lower_1 = +1
+    elif i.isdigit():
+        number = +1
+    else:
+        string.punctuation = +1
+if len(a) < 10:
+    print('Пароль должен иметь не менее 10 символов')
+elif upper_1 >= 1 and lower_1 >= 1 and number >= 1 and string.punctuation >= 1:
+    print('Пароль сильный')
+else:
+    print('Пароль слабый')
