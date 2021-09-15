@@ -14,3 +14,18 @@ https://en.wikipedia.org/wiki/Fizz_buzz
 
 def fizzbuzz(n: int) -> str:
     pass
+
+def fizzbuzz(n: int) -> str:
+    list1 = []
+    for i in n:
+        if i % 3 == 0 and i % 5 == 0:
+            list1.append("Fizzbuzz")
+        elif i % 3 == 0:
+            list1.append("Fizz")
+        elif i % 5 == 0:
+            list1.append("Buzz")
+        else:
+            list1.append(i)
+    return list1
+
+print(fizzbuzz([1, 2, 3, 5, 10, 15]))
